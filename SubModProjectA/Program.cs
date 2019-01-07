@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SubModCommon;
+using System;
 
 namespace SubModProjectA
 {
@@ -6,7 +7,11 @@ namespace SubModProjectA
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var values = Enum.GetNames(typeof(TestEnum));
+            foreach(var value in values)
+            {
+                Console.WriteLine(value);
+            }
         }
     }
 }
